@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Smoke Suite" parallel="false" preserve-order="true">
+<suite name="Smoke Suite" parallel="false">
     <test name="Search">
         <classes>
-            <class name="runners.TestRunner"/>
+            <class name="runners.TestRunner">
+            <methods>
+                <include name="testResultId1"/>
+            </methods>
+        </class>
         </classes>
     </test>
 </suite>

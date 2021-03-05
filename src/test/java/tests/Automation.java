@@ -1,9 +1,11 @@
+package tests;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import pageobjects.SearchResult;
-import pageobjects.Header;
+import pageobjects.HeaderSearch;
 
 public class Automation {
 
@@ -24,7 +26,7 @@ public class Automation {
 
     @Test
     public void testResultId1() {
-        Header search = new Header(driver);
+        HeaderSearch search = new HeaderSearch(driver);
         search.sendTextSearchBox("Software Test Design");
         searchResult = new SearchResult(driver);
         Assert.assertEquals(searchResult.getResults(),"A Practitioner's Guide to Software Test Design");

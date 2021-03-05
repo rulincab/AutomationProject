@@ -8,7 +8,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import java.util.List;
 
 public class SearchResult {
     private WebDriver driver;
@@ -26,13 +25,21 @@ public class SearchResult {
     @FindBy(css = "div[data-component-id='1']")
     private WebElement elementId1;
 
+    @FindBy(css = "div[data-asin='158053791X'] [class='a-section a-spacing-medium']")
+    private WebElement bookSoftwareDataAsin;
+
     @FindBy(css = "span[id=productTitle]")
     private WebElement productTitle;
 
     //Actions
-    public void clickresultId1() {
+    public void clickResultId1() {
         wait.until(ExpectedConditions.elementToBeClickable(elementId1));
         elementId1.click();
+    }
+
+    public void clickResultWithDataAsin() {
+        wait.until(ExpectedConditions.elementToBeClickable(bookSoftwareDataAsin));
+        bookSoftwareDataAsin.click();
     }
 
     public String getResults() {

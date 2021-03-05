@@ -8,13 +8,13 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Header {
+public class HeaderSearch {
 
     private WebDriver driver;
     private WebDriverWait wait;
 
     //Constructor
-    public Header(WebDriver browser) {
+    public HeaderSearch(WebDriver browser) {
         driver = browser;
         PageFactory.initElements(driver, this);
         wait = new WebDriverWait(driver, 20);
